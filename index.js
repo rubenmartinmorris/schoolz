@@ -1,9 +1,6 @@
 var inquirer = require("inquirer");
+var mainPage = require("./views/mainPage");
 
-inquirer
-  .prompt([
-    /* Pass your questions in here */
-  ])
-  .then((answers) => {
-    // Use user feedback for... whatever!!
-  });
+inquirer.prompt([mainPage]).then((answers) => {
+  console.log(answers);
+});
