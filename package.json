@@ -1,0 +1,22 @@
+{
+  "name": "schoolz",
+  "version": "1.0.0",
+  "description": "Let us hope the setup finally worked",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubenmartinmorris/schoolz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rubenmartinmorris/schoolz/issues"
+  },
+  "homepage": "https://github.com/rubenmartinmorris/schoolz#readme",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}
