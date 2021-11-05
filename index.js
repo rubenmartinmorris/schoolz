@@ -6,6 +6,19 @@ const { Person, Teacher, Student, Lesson } = require("./stuff/person");
 const viewLessonsPage = require("./views/viewLessonsPage");
 const lessonList = require("./data/lists");
 
+let objectLessonList = [];
+lessonList.forEach((lesson) =>
+  objectLessonList.push(
+    new Lesson(
+      lesson.subject,
+      lesson.teacher,
+      lesson.student,
+      lesson.date,
+      lesson.time
+    )
+  )
+);
+
 function startUp() {
   inquirer.prompt(mainPage).then((answers) => {
     if (answers.mainPage === "lessons") {
@@ -61,6 +74,7 @@ function addLesson() {
         console.log("Hello World > helloworld.txt");
       }
     );
+
     startUp();
   });
 }
@@ -70,8 +84,8 @@ function viewLessons() {
 
   inquirer.prompt(viewLessonsPage).then((answers) => {
     if (answers.viewLessonsPage === "Main Menu") {
-      console.log(lessonList);
-      console.log(lessonList[0].constructor.name);
+      console.log(objectLessonList);
+      console.log(objectLessonList[0].constructor.name);
 
       startUp();
     }
