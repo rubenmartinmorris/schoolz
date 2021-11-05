@@ -4,8 +4,7 @@ const lessonsPage = require("./views/lessonsPage");
 const addLessonPage = require("./views/addLessonPage");
 const { Person, Teacher, Student, Lesson } = require("./stuff/person");
 const viewLessonsPage = require("./views/viewLessonsPage");
-
-const lessonList = [];
+const lessonList = require("./data/lists");
 
 function startUp() {
   inquirer.prompt(mainPage).then((answers) => {
@@ -50,6 +49,18 @@ function addLesson() {
     );
     lessonList.push(lesson);
     console.log(lesson, lessonList);
+    fs = require("fs");
+    fs.writeFile(
+      "./data/lists.js",
+      `const lessonList = ${JSON.stringify(
+        lessonList
+      )}\n\nmodule.exports = lessonList`,
+
+      function (err) {
+        if (err) return console.log(err);
+        console.log("Hello World > helloworld.txt");
+      }
+    );
     startUp();
   });
 }
@@ -59,11 +70,12 @@ function viewLessons() {
 
   inquirer.prompt(viewLessonsPage).then((answers) => {
     if (answers.viewLessonsPage === "Main Menu") {
+      console.log(lessonList);
+      console.log(lessonList[0].constructor.name);
+
       startUp();
     }
   });
 }
 
 startUp();
-
-module.exports = lessonList;
