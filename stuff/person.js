@@ -37,4 +37,14 @@ class Student extends Person {
   }
 }
 
-module.exports = { Person, Teacher, Student };
+class Lesson {
+  constructor(subject, teacher, student, date, time) {
+    this.subject = subject;
+    this.teacher = teacher;
+    this.student = student;
+    this.date = date;
+    this.time = time;
+  }
+}
+
+module.exports = { Person, Teacher, Student, Lesson };
