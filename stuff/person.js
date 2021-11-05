@@ -12,6 +12,29 @@ class Person {
     this.phoneNumber = phoneNumber;
   }
   viewDetails() {
-    return `This is ${nickname}. ${this.preFix} ${this.firstName} ${this.lineID}, ${this.eMail} ${this.phoneNumber}`;
+    console.log(
+      `This is ${this.nickname}. ${this.preFix} ${this.firstName} ${this.lineID}, ${this.eMail} ${this.phoneNumber}`
+    );
+  }
+  addSubject(subject) {
+    this.subject.push(subject);
   }
 }
+
+class Teacher extends Person {
+  constructor(nickname) {
+    super();
+    this.nickname = nickname;
+    this.subject = [];
+  }
+}
+
+class Student extends Person {
+  constructor(nickname) {
+    super();
+    this.nickname = nickname;
+    this.subject = [];
+  }
+}
+
+module.exports = { Person, Teacher, Student };
