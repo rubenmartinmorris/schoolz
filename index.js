@@ -1,10 +1,14 @@
+//setup
 const inquirer = require("inquirer");
+// controller?
+const { Person, Teacher, Student, Lesson } = require("./stuff/person");
+// model?
+const { lessonsList, studentsList } = require("./data/lists");
+//views
 const { mainPage, teachers, exit } = require("./views/mainPage");
 const lessonsPage = require("./views/lessonsPage");
 const addLessonPage = require("./views/addLessonPage");
-const { Person, Teacher, Student, Lesson } = require("./stuff/person");
 const viewLessonsPage = require("./views/viewLessonsPage");
-const { lessonsList, studentsList } = require("./data/lists");
 const studentsPage = require("./views/studentsPage");
 const viewStudentsPage = require("./views/viewStudentsPage");
 const addStudentPage = require("./views/addStudentPage");

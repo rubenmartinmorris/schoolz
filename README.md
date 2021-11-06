@@ -76,3 +76,5 @@ What is the teachers last name?
 Deky
 What are the teachers contact details?
 line id tel
+
+// view teachers' schedule
