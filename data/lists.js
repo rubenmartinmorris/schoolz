@@ -1,3 +1,6 @@
-const lessonList = [{"subject":"english","teacher":"Paul","student":"Dek","date":"sdf","time":"sdf"},{"subject":"english","teacher":"Eve","student":"Dek","date":"sdf","time":"sd"},{"subject":"english","teacher":"Dick","student":"PAPAPAAAA","date":"yeseterday","time":"night"},{"subject":"english","teacher":"Paul","student":"Dek","date":"1","time":"1"},{"subject":"thai","teacher":"Eve","student":"Nim","date":"05/10/2021","time":"18:00"},{"subject":"math","teacher":"Tom","student":"Nim","date":"asdf","time":"d"}]
+const lessonsList = [{"nickname":"dek"},{"subject":"math","teacher":"Paul","student":"Dek","date":"123","time":"123"},{"subject":"english","teacher":"Paul","student":"Dek","date":"321","time":"321"},{"subject":"english","teacher":"Paul","student":"Dek","date":"333","time":"333"}]
 
-module.exports = lessonList
+        const studentsList = [{"nickname":"Lala","subject":[]},{"nickname":"nam","subject":[]},{"nickname":"hhh","subject":[]},{"nickname":"dfg","subject":[]},{"nickname":"bobo","subject":[]},{"nickname":"bibi","subject":[]}]
+      
+
+module.exports = {lessonsList,studentsList}

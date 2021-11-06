@@ -7,10 +7,9 @@ const mainPage = [
   },
 ];
 
-const students = function () {};
 const teachers = function () {};
 const exit = function () {
   process.exit();
 };
 
-module.exports = { mainPage, students, teachers, exit };
+module.exports = { mainPage, teachers, exit };
